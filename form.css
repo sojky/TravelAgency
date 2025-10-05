@@ -1,0 +1,47 @@
+form {
+    margin: auto;
+}
+
+fieldset {
+    height: 100%;
+    border: 2px solid #FFFDF7;
+    border-radius: 10px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+    padding: 20px;
+    padding-bottom: 5px;
+}
+
+legend {
+    text-align: center;
+    font-weight: bold;
+    padding: 0 10px;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    background-color: #ffffff;
+}
+
+button {
+    width: 100%;
+    margin-top: 15px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #02babd !important;
+}
+
+form a:hover {
+    font-weight: bold;
+}

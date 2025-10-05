@@ -45,6 +45,10 @@ nav a:hover {
     color:#2C2C2C !important;
 }
 
+.selected {
+    text-decoration: underline;
+}
+
 .border {
     border-radius: 20px; 
     border: 5px solid #FF7F50 !important;
@@ -67,5 +71,9 @@ footer {
 }
 
 p {
+    font-size: 32px;
+}
+
+section {
     font-size: 18px;
 }
