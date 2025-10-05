@@ -1,14 +1,13 @@
 form {
     margin: auto;
+    width: 440px;
 }
 
 fieldset {
     height: 100%;
-    border: 2px solid #FFFDF7;
-    border-radius: 10px;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
     padding: 20px;
     padding-bottom: 5px;
+    background-color: #ffcb28
 }
 
 legend {

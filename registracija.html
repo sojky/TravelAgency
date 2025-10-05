@@ -9,12 +9,12 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="form.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="prijava.js"></script>
+    <script src="registracija.js"></script>
 </head>
 <body>
     <header class="color1 color3">
         <h1>Еурокомпас</h1>
-        <hr>
+        <hr class="mb-0">
         <nav class="navbar navbar-expand-sm">
             <div class="container-fluid justify-content-center">
                 <ul class="navbar-nav">
@@ -44,17 +44,25 @@
     </header>
     <main class="color2 py-3">
         <form action="#">
-            <fieldset>
+            <fieldset class="border">
                 <legend class="color5">Регистрација</legend>
                 <hr class="mt-5">
                 <label for="username" class="color5">Корисничко име:</label>
-                <input type="text" id="username" name="username" required>
+                <input type="text" id="username" name="username" maxlength="45" required>
+                <div class="mt-2 text-danger text-center" id="erroruser">Корисничко име је заузето</div>
+
                 <label for="username" class="color5">Е-маил адреса:</label>
-                <input type="text" id="username" name="username" required>
+                <input type="email" id="email" name="email" maxlength="45" required>
+                <div class="mt-2 text-danger text-center" id="erroremail">Већ постоји налог са задатом е-маил адресом</div>
+
                 <label for="password" class="color5">Лозинка:</label>
-                <input type="password" id="password" name="password" required>
+                <input type="password" id="password" name="password" maxlength="45" required>
+                <div class="mt-2 text-danger text-center" id="errorpass1">Лозинка мора садржати најмање 8 карактера, бар једно велико слово и једно мало слово, бар један број и минимално један од знакова @$!%*?&</div>
+
                 <label for="password" class="color5">Поновљена лозинка:</label>
-                <input type="password" id="password" name="password" required>
+                <input type="password" id="repeat" name="repeat" maxlength="45" required>
+                <div class="mt-2 text-danger text-center" id="errorpass2">Погрешна поновљена лозинка</div>
+
                 <button type="submit" class="color3 color4 mb-2">Региструј се</button>
             </fieldset>
         </form>

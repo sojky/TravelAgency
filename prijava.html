@@ -14,7 +14,7 @@
 <body>
     <header class="color1 color3">
         <h1>Еурокомпас</h1>
-        <hr>
+        <hr class="mb-0">
         <nav class="navbar navbar-expand-sm">
             <div class="container-fluid justify-content-center">
                 <ul class="navbar-nav">
@@ -44,13 +44,14 @@
     </header>
     <main class="color2 py-3">
         <form action="#">
-            <fieldset>
+            <fieldset class="border">
                 <legend class="color5">Пријава</legend>
                 <hr class="mt-5">
                 <label for="username" class="color5">Корисничко име:</label>
                 <input type="text" id="username" name="username" required>
                 <label for="password" class="color5">Лозинка:</label>
                 <input type="password" id="password" name="password" required>
+                <div class="mt-2 text-danger text-center" id="errormsg">Погрешни креденцијали</div>
                 <button type="submit" class="color3 color4 mb-2">Пријави се</button>
                 <div class="text-center color5">
                     Немате налог? Направите га 
