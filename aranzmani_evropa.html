@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aranzmani: Evropa</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="color1 color3">
+        <h1>Еурокомпас</h1>
+        <nav class="navbar navbar-expand-sm">
+            <div class="container-fluid justify-content-center">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link color3">Почетна</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="galerija.html" class="nav-link color3">Галерија</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle color3" data-bs-toggle="dropdown">Аранжмани</a>
+                        <ul class="dropdown-menu color1">
+                            <li><a href="aranzmani_evropa.html" class="dropdown-item color3">Европа</a></li>
+                            <li><a href="aranzmani_zima.html" class="dropdown-item color3">Лето 2025</a></li>
+                            <li><a href="#" class="dropdown-item color3">Зима 2025</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="moj_nalog.html" class="nav-link color3">Мој налог</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="o_nama.html" class="nav-link color3">О нама</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="color2 py-3">
+        <div class="container">
+            <h2 class="color3 text-center">Европа</h2>
+
+            <div class="row mb-3">
+                <div class="col-12 col-lg-6 d-flex align-items-center color5">
+                    <input type="text" id="searchInput" class="form-control w-50 align-items-center" placeholder="Претрага по називу или цени">
+                </div>
+                <div class="col-12 col-lg-6 d-flex align-items-center justify-content-end color5">
+                    <select id="sortSelect" class="form-select w-50">
+                        <option value="">Сортирај по</option>
+                        <option value="nameAsc">Назив (A-Z)</option>
+                        <option value="nameDesc">Назив (Z-A)</option>
+                        <option value="priceAsc">Цена (растуће)</option>
+                        <option value="priceDesc">Цена (опадајуће)</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <div class="row mb-3 g-4">
+
+                    <div class="col-md-4">
+                        <div class="card border border-warning rounded-4 shadow-sm h-100 text-center">
+                            <img src="https://photos.admiral.md/23dd69678c14876b235a39e82eda4620.jpg" class="card-img-top rounded-top-4" alt="Праг" style="height: 250px; width: 100%; object-fit: cover;">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title mb-2">Праг</h5>
+                                <p class="card-text mb-2">Уживајте у романтици и чарима Прагa! Све што вам треба је једно путовање да се заљубите.</p>
+                                <p class="card-text mb-1"><strong>Цена:</strong> 200€</p>
+                                <p class="card-text mb-3"><strong>Просечна оцена:</strong> 4.5/5</p>
+                                <button class="btn btn-primary" style="background-color: #FFAB28; border: #FFAB28;">Резервиши</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card border border-warning rounded-4 shadow-sm h-100 text-center">
+                            <img src="https://assets.cntraveller.in/photos/62752c1974266e7300892c46/3:2/w_5760,h_3840,c_limit/Seine%20paris%20bike-GettyImages-1161606501.jpeg" class="card-img-top rounded-top-4" alt="Париз" style="height: 250px; width: 100%; object-fit: cover;">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title mb-2">Париз</h5>
+                                <p class="card-text mb-2">Истражите град светлости – романтични Париз са Еифеловим торњем, музејима и шетњама уз Сену.</p>
+                                <p class="card-text mb-1"><strong>Цена:</strong> 250€</p>
+                                <p class="card-text mb-3"><strong>Просечна оцена:</strong> 4.7/5</p>
+                                <button class="btn btn-secondary" style="background-color: #FFAB28; border: #FFAB28;">Резервиши</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card border border-warning rounded-4 shadow-sm h-100 text-center">
+                            <img src="https://static.independent.co.uk/s3fs-public/thumbnails/image/2019/02/19/16/budapest-1.jpg?width=1200" class="card-img-top rounded-top-4" alt="Будимпешта" style="height: 250px; width: 100%; object-fit: cover;">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title mb-2">Будимпешта</h5>
+                                <p class="card-text mb-2">Откријте чаролију Будимпеште – град мостова, термалних купатила и незаборавне атмосфере.</p>
+                                <p class="card-text mb-1"><strong>Цена:</strong> 220€</p>
+                                <p class="card-text mb-3"><strong>Просечна оцена:</strong> 4.6/5</p>
+                                <button class="btn btn-primary" style="background-color: #FFAB28; border: #FFAB28;">Резервиши</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
