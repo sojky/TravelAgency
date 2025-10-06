@@ -3,10 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eurokompas: galerija</title>
+    <title>Eurokompas: Galerija</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        .object-fit-cover {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
 </head>
 <body>
     <header class="color1 color3">
@@ -25,8 +32,8 @@
                         <a href="#" class="nav-link dropdown-toggle color3" data-bs-toggle="dropdown">Аранжмани</a>
                         <ul class="dropdown-menu color1">
                             <li><a href="aranzmani_evropa.html" class="dropdown-item color3">Европа</a></li>
-                            <li><a href="aranzmani_zima.html" class="dropdown-item color3">Лето 2025</a></li>
-                            <li><a href="#" class="dropdown-item color3">Зима 2025</a></li>
+                            <li><a href="aranzmani_leto.html" class="dropdown-item color3">Лето 2025</a></li>
+                            <li><a href="aranzmani_zima.html" class="dropdown-item color3">Зима 2025</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">
@@ -39,10 +46,52 @@
             </div>
         </nav>
     </header>
+
     <main class="color2 py-3">
+        <div class="container">
+
+            <section class="mb-5">
+                <h2 class="mb-4 text-center">Галерија слика</h2>
+                <div class="row g-3">
+                    <div class="col-12 col-md-6">
+                        <div class="ratio ratio-4x3 border rounded">
+                            <img src="https://bonjour.ba/storage/uploads/1/stories/2019/2019-12/putovanja/putovanjansl.jpg" 
+                                 alt="Поглед 1" class="img-fluid object-fit-cover">
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="ratio ratio-4x3 border rounded">
+                            <img src="https://goopti-master.s3.amazonaws.com/translated_image/shutterstock_2190184551-1-1-5cf4fb14-80bc-433e-b1d7-907c23d1c71e.jpg" 
+                                 alt="Поглед 2" class="img-fluid object-fit-cover">
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="ratio ratio-4x3 border rounded">
+                            <img src="https://cdn.navidiku.rs/firme/galerija5/s22366/trip-top-putovanja-de401f-1.jpg" 
+                                 alt="Поглед 3" class="img-fluid object-fit-cover">
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="ratio ratio-4x3 border rounded">
+                            <img src="images/ziza.jpeg" alt="Поглед 4" class="img-fluid object-fit-cover">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="mb-5">
+                <div class="ratio ratio-16x9 border rounded">
+                    <iframe src="https://www.youtube.com/embed/V2iCkdfMvQk"
+                            title="YouTube video" allowfullscreen style="border: 0"></iframe>
+                </div>
+            </section>
+
+        </div>
     </main>
-    <footer class="color1 color3">
-        © Copyright 2025, Алекса Секулић и Софија Павловић, Одсек за софтверско инжењерство Електротехничког факултета
+
+    <footer class="color1 color3 text-center py-2">
+        © Copyright 2025, Алекса Секулић и Софија Павловић, 
+        Одсек за софтверско инжењерство Електротехничког факултета
         Универзитета у Београду
     </footer>
 </body>

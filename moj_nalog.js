@@ -2,7 +2,6 @@ $(document).ready(function() {
 
     init();
 
-
     function init() {
         let user_json = sessionStorage.getItem("user")
         if (!user_json) {
@@ -34,6 +33,29 @@ $(document).ready(function() {
             });
             let cardBody = $('<div>', { class: 'card-body d-flex flex-column' });
             let title = $('<h3>', { class: 'card-title mb-2', text: element.name });
+            let section = $('<section>', { text: element.date });
+            cardBody.append(title, section);
+            card.append(img, cardBody);
+            col.append(card);
+            future_panel.append(col);
+        });
+
+        let storedReservations = JSON.parse(localStorage.getItem('reservations')) || [];
+        storedReservations.forEach(element => {
+            let col = $('<div>', { class: 'col-12 col-md-4 mb-3' });
+            let card = $('<div>', { class: 'card border border-warning rounded-4 shadow-sm h-100 text-center' });
+            let img = $('<img>', {
+                src: element.image,
+                alt: element.title,
+                class: 'card-img-top',
+                css: {
+                    height: '250px',
+                    width: '100%',
+                    objectFit: 'cover'
+                }
+            });
+            let cardBody = $('<div>', { class: 'card-body d-flex flex-column' });
+            let title = $('<h3>', { class: 'card-title mb-2', text: element.title });
             let section = $('<section>', { text: element.date });
             cardBody.append(title, section);
             card.append(img, cardBody);

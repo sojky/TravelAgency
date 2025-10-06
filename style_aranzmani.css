@@ -1,0 +1,14 @@
+section {
+    font-size: 18px;
+}
+
+.btn-primary {
+    background-color: #02babd !important;
+    border-color: #02babd !important;
+    color: white;
+}
+
+.btn-primary:hover{
+    background-color: #019999 !important;
+    border-color: #019999 !important;
+}
