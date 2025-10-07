@@ -18,7 +18,8 @@ $(document).ready(function() {
         });
 
         let future_panel = $("#future");
-        user.future.forEach(element => {
+        let future = getUpcomingBookings(user.bookings)
+        future.forEach(element => {
             let col = $('<div>', { class: 'col-12 col-md-4 mb-3' });
             let card = $('<div>', { class: 'card border border-warning rounded-4 shadow-sm h-100 text-center' });
             let img = $('<img>', {
@@ -41,6 +42,8 @@ $(document).ready(function() {
         });
         
         let past_panel = $("#past");
+        let past = getPastBookings(user.bookings)
+
         user.past.forEach(element => {
             let col = $('<div>', { class: 'col-12 col-md-4 mb-3' });
             let card = $('<div>', { class: 'card border border-warning rounded-4 shadow-sm h-100 text-center' });
@@ -64,5 +67,31 @@ $(document).ready(function() {
             past_panel.append(col);
         });
     }
+
+    function parseDate(dateStr) {
+        const [day, month, year] = dateStr.split('/').map(Number);
+        return new Date(year, month - 1, day);
+    }
+
+    function getPastBookings(bookings) {
+        const today = new Date();
+        today.setHours(0, 0, 0, 0);
+
+        return bookings.filter(b => {
+            const start = parseDate(b.date);
+            return start <= today;
+        });
+    }
+
+    function getUpcomingBookings(bookings) {
+        const today = new Date();
+        today.setHours(0, 0, 0, 0);
+
+        return bookings.filter(b => {
+            const start = parseDate(b.date);
+            return start > today;
+        });
+    }
+
     
 });
