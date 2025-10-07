@@ -33,27 +33,4 @@ $(document).ready(function() {
 
     $('#searchInput').on('input', filterAndSort);
     $('#sortSelect').on('change', filterAndSort);
-
-$cards.each(function() {
-        $(this).find('.btn-primary').click(function(e) {
-            e.preventDefault();
-
-            let card = $(this).closest('.card-item');
-            let reservation = {
-                title: card.find('.card-title').text(),
-                date: card.find('section').first().text(),
-                image: card.find('img').attr('src')
-            };
-
-            let reservations = JSON.parse(localStorage.getItem('reservations')) || [];
-            let exists = reservations.some(r => r.title === reservation.title && r.date === reservation.date);
-
-            if(!exists) {
-                reservations.push(reservation);
-                localStorage.setItem('reservations', JSON.stringify(reservations));
-            }
-
-            window.location.href = "moj_nalog.html";
-        });
-    });
 });
