@@ -45,19 +45,6 @@ $(document).ready(function() {
                 password: password,
                 bookings: [],
                 bookingsEN: []
-                /*
-                elementi niza bookings i bookingsEN su objekati oblika
-
-                {
-                    src: <putanja_do_slike>,
-                    name: <ime_slike>,
-                    date: <datum_pocetka_putovanja>,
-                    duration: <trajanje_putovanja>
-                }
-
-
-                date, duration i name samo uzeti iz teksta koji je vezan za sliku bilo da je srpski ili engleski. U metodi rezeracije je potrebno dodati trazenu rezervaciju u oba niza odgovarajucem formatu (prevesti ime)
-                */
             });
             localStorage.setItem("users", JSON.stringify(users));
             window.location.href = "prijava.html";
