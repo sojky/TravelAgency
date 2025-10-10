@@ -43,11 +43,15 @@ $(document).ready(function() {
                 username: username,
                 email: email,
                 password: password,
-                bookings: [],
-                bookingsEN: []
+                bookings: []
             });
             localStorage.setItem("users", JSON.stringify(users));
-            window.location.href = "prijava.html";
+            
+            if (document.documentElement.lang === "en") {
+                window.location.href = "../en/prijavaEN.html";
+            } else {
+                window.location.href = "../sr/prijava.html";
+            }
         });
     }
 });

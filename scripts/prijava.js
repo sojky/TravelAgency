@@ -16,7 +16,11 @@ $(document).ready(function() {
                 users.forEach(element => {
                     if (element.username == username && element.password == password) {
                         sessionStorage.setItem("user", JSON.stringify(element));
-                        window.location.href = "index.html";
+                        if (document.documentElement.lang === "en") {
+                            window.location.href = "../en/indexEN.html";
+                        } else {
+                            window.location.href = "../sr/index.html";
+                        }
                         return;
                     }
                 });

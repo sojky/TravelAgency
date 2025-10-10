@@ -3,21 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eurokompas: index</title>
+    <title>Eurokompas: Početna</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flag-icons/css/flag-icons.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" href="styles.css">
-    <script src="initDB.js"></script>
+    <link rel="stylesheet" href="../styles/styles.css">
+    <script src="../scripts/initDB.js"></script>
 </head>
 <body>
     <header class="color1 color3">
-        <h1>Еурокомпас</h1>
+        <div class="d-flex justify-content-center align-items-center gap-4">   
+            <img src="../images/logo.png" alt="Лого" class="img-fluid" style="height:2.5em; width:auto;">
+            <h1 class="m-0">Еурокомпас</h1>
+            <img src="../images/logo.png" alt="Лого" class="img-fluid" style="height:2.5em; width:auto;">
+        </div>
         <hr class="mb-0">
         <nav class="navbar navbar-expand-sm">
             <div class="container-fluid justify-content-center">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a href="index.html" class="nav-link color3 selected" >Почетна</a>
+                        <a href="index.html" class="nav-link color3 selected">Почетна</a>
                     </li>
                     <li class="nav-item">
                         <a href="galerija.html" class="nav-link color3">Галерија</a>
@@ -36,6 +41,15 @@
                     <li class="nav-item">
                         <a href="o_nama.html" class="nav-link color3">О нама</a>
                     </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle color3" data-bs-toggle="dropdown">
+                            <span class="fi fi-rs"></span>
+                        </a>
+                        <ul class="dropdown-menu color1">
+                            <li><a href="../en/indexEN.html" class="dropdown-item color3">Енглески</a></li>
+                            <li><a href="index.html" class="dropdown-item color3 selected">Српски</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
         </nav>
@@ -45,19 +59,17 @@
             <div class="row">
                 <div class="col-12 col-lg-6 d-flex align-items-center color5">
                     <p>
-                        Искусите доживљаје које ћете препричавати унуцима!
-                        Са преко 10 година искуства у туристичкој индустрији доносимо вам најбоље понуде широм света. Само резервишите аранжман и пустите да вам ми <i>покажемо правац</i>.
+                        Искусите доживљаје које ћете препричавати унуцима! Са преко 10 година искуства у туристичкој индустрији доносимо вам најбоље понуде широм света. Само резервишите аранжман и пустите да вам ми <i>покажемо правац</i>.
                     </p>
                 </div>
                 <div class="col-12 col-lg-6">
-                    <img src="images/europe.jpg" alt="europe" class="img-fluid border" style="object-fit: cover;">
+                    <img src="../images/europe.jpg" alt="europe" class="img-fluid border" style="object-fit: cover;">
                 </div>
             </div>
         </div>
     </main>
     <footer class="color1 color3">
-        © Copyright 2025, Алекса Секулић и Софија Павловић, Одсек за софтверско инжењерство Електротехничког факултета
-        Универзитета у Београду
+        © Copyright 2025, Алекса Секулић и Софија Павловић, Одсек за софтверско инжењерство Електротехничког факултета Универзитета у Београду
     </footer>
 </body>
 </html>

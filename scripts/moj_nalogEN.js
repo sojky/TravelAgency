@@ -5,17 +5,17 @@ $(document).ready(function() {
     function init() {
         let user_json = sessionStorage.getItem("user")
         if (!user_json) {
-            window.location.href = "prijava.html"
+            window.location.href = "../en/prijavaEN.html"
             return;
         }
         let user = JSON.parse(user_json);
         test(user)
         
-        $("#hello").text("Поздрав, " + user.username);
+        $("#hello").text("Hello, " + user.username);
 
         $("#logout").click(function() {
             sessionStorage.removeItem("user");
-            window.location.href = "index.html";
+            window.location.href = "../en/indexEN.html";
         });
 
         let future_panel = $("#future");
@@ -61,7 +61,7 @@ $(document).ready(function() {
         const $card = $('<div>', { class: 'card border rounded-4 shadow-sm h-100 text-center' });
         const $img = $('<img>', {
             src: trip.src,
-            alt: trip.name,
+            alt: trip.nameEN,
             class: 'card-img-top',
             css: {
                 height: '250px',
@@ -70,21 +70,21 @@ $(document).ready(function() {
             }
         });
         const $cardBody = $('<div>', { class: 'card-body d-flex flex-column' });
-        const $title = $('<h1>', { class: 'card-title mb-4', text: trip.name });
+        const $title = $('<h1>', { class: 'card-title mb-4', text: trip.nameEN });
         const $table = $('<table>').append(
             $('<tr>').append(
-                $('<th>', { text: 'Датум поласка' }),
+                $('<th>', { text: 'Start date' }),
                 $('<td>', { text: trip.date })
             ),
             $('<tr>').append(
-                $('<th>', { text: 'Трајање у данима' }),
+                $('<th>', { text: 'Duration in days' }),
                 $('<td>', { text: trip.duration })
             )
         );
         const $hr = $('<hr>');
         const $button = $('<button>', {
             class: 'color3 cancel',
-            text: 'Откажи резрервацију',
+            text: 'Cancel reservation',
             click: function() {
                 const [day, month, year] = trip.date.split('/').map(Number);
                 const tripDate = new Date(year, month - 1, day);
@@ -94,7 +94,7 @@ $(document).ready(function() {
                     $col.remove();
                     const tripName = trip.name || $img.attr('alt');
                     const user = JSON.parse(sessionStorage.getItem('user'));
-                    user.bookings = user.bookings.filter(b => b !== tripName);
+                    user.bookings = user.bookings.filter(b => b.nameEN !== tripName);
                     const users = JSON.parse(localStorage.getItem('users'));
                     const userIndex = users.findIndex(u => u.username === user.username);
                     users[userIndex] = user;
@@ -102,7 +102,7 @@ $(document).ready(function() {
                     localStorage.setItem('users', JSON.stringify(users));
 
                 } else {
-                    alert('Отказивање је могуће само више од 5 дана пре поласка.');
+                    alert('Cancellation is possible only more than 5 days before departure.');
                 }
             }
         });
@@ -117,7 +117,7 @@ $(document).ready(function() {
         const $card = $('<div>', { class: 'card border rounded-4 shadow-sm h-100 text-center' });
         const $img = $('<img>', {
             src: trip.src,
-            alt: trip.name,
+            alt: trip.nameEN,
             class: 'card-img-top',
             css: {
                 height: '250px',
@@ -126,14 +126,14 @@ $(document).ready(function() {
             }
         });
         const $cardBody = $('<div>', { class: 'card-body d-flex flex-column' });
-        const $title = $('<h1>', { class: 'card-title mb-4', text: trip.name });
+        const $title = $('<h1>', { class: 'card-title mb-4', text: trip.nameEN });
         const $table = $('<table>').append(
             $('<tr>').append(
-                $('<th>', { text: 'Датум поласка' }),
+                $('<th>', { text: 'Start date' }),
                 $('<td>', { text: trip.date })
             ),
             $('<tr>').append(
-                $('<th>', { text: 'Трајање у данима' }),
+                $('<th>', { text: 'Duration in days' }),
                 $('<td>', { text: trip.duration })
             )
         );
@@ -149,7 +149,7 @@ $(document).ready(function() {
             });
             const $input = $('<input>', {
                 type: 'radio',
-                name: 'ocena',
+                name: 'grade',
                 id: id,
                 value: i,
                 css: { marginRight: '10px' }
@@ -158,20 +158,20 @@ $(document).ready(function() {
         }
         const $button = $('<button>', {
             class: 'color4 color3',
-            text: 'Оцени аранжман',
+            text: 'Rate the offer',
             click: function () {
-                const selectedValue = $ratingGroup.find('input[name="ocena"]:checked').val();
+                const selectedValue = $ratingGroup.find('input[name="grade"]:checked').val();
                 if (!selectedValue) return;
                 const tripName = trip.name || $img.attr('alt');
                 const user = JSON.parse(sessionStorage.getItem('user'));
-                const booking = user.bookings.find(b => b.name === tripName);
-                const oldReview = booking.review ?? null;
+                const booking = user.bookings.find(b => b.nameEN === tripName);
+                const oldReview = booking.review;
                 booking.review = Number(selectedValue);
                 const users = JSON.parse(localStorage.getItem('users'));
                 const userIndex = users.findIndex(u => u.username === user.username);
                 users[userIndex] = user;
                 const trips = JSON.parse(localStorage.getItem('trips'));
-                const tripData = trips.find(t => t.name === tripName);
+                const tripData = trips.find(t => t.nameEN === tripName);
                 if (oldReview === null) {
                     tripData.review_sum += Number(selectedValue);
                     tripData.review_number += 1;
@@ -194,36 +194,41 @@ $(document).ready(function() {
     function test(user) {
         let array = [
             {
-                src: 'images/tenerife.webp',
+                src: '../images/tenerife.webp',
                 name: 'Тенерифе',
+                nameEN: 'Tenerife',
                 date: '4/11/2025',
                 duration: 7,
                 review: null
             },
             {
-                src: 'images/prague.jpg',
+                src: '../images/prague.jpg',
                 name: 'Праг',
+                nameEN: 'Prague',
                 date: '4/5/2025',
                 duration: 3,
                 review: null
             },
             {
-                src: 'images/paris.webp',
+                src: '../images/paris.webp',
                 name: 'Париз',
+                nameEN: 'Paris',
                 date: '3/9/2024',
                 duration: 6,
                 review: null
             },
             {
-                src: 'images/budapest.avif',
+                src: '../images/budapest.avif',
                 name: 'Будимпешта',
+                nameEN: 'Budapest',
                 date: '21/5/2023',
                 duration: 2,
                 review: null
             },
             {
-                src: 'images/sicily.jpg',
+                src: '../images/sicily.jpg',
                 name: 'Сицилија',
+                nameEN: 'Sicily',
                 date: '20/3/2023',
                 duration: 3,
                 review: null

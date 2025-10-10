@@ -4,16 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aranzmani: Leto 2025</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flag-icons/css/flag-icons.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="style_aranzmani.css">
+    <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="stylesheet" href="../styles/style_aranzmani.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="aranzmani.js"></script>
+    <script src="../scripts/aranzmani.js"></script>
 </head>
 <body>
     <header class="color1 color3">
-        <h1>Еурокомпас</h1>
+        <div class="d-flex justify-content-center align-items-center gap-4">   
+            <img src="../images/logo.png" alt="Лого" class="img-fluid" style="height:2.5em; width:auto;">
+            <h1 class="m-0">Еурокомпас</h1>
+            <img src="../images/logo.png" alt="Лого" class="img-fluid" style="height:2.5em; width:auto;">
+        </div>
         <hr class="mb-0">
         <nav class="navbar navbar-expand-sm">
             <div class="container-fluid justify-content-center">
@@ -37,6 +42,15 @@
                     </li>
                     <li class="nav-item">
                         <a href="o_nama.html" class="nav-link color3">О нама</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle color3" data-bs-toggle="dropdown">
+                            <span class="fi fi-rs"></span>
+                        </a>
+                        <ul class="dropdown-menu color1">
+                            <li><a href="../en/aranzmani_letoEN.html" class="dropdown-item color3">Енглески</a></li>
+                            <li><a href="aranzmani_leto.html" class="dropdown-item color3 selected">Српски</a></li>
+                        </ul>
                     </li>
                 </ul>
             </div>
@@ -71,42 +85,42 @@
                 <div class="row mb-3 g-4">
                     <div class="col-md-4 card-item">
                         <div class="card border border-warning rounded-4 shadow-sm h-100 text-center">
-                            <img src="images/tenerife.webp" class="card-img-top" alt="Тенерифе" style="height: 250px; width: 100%; object-fit: cover;">
+                            <img src="../images/tenerife.webp" class="card-img-top" alt="Тенерифе" style="height: 250px; width: 100%; object-fit: cover;">
                             <div class="card-body d-flex flex-column">
                                 <h5 class="card-title mb-2">Тенерифе</h5>
                                 <section>Септембар 2025</section>
                                 <section class="card-text mb-2">Вулкански пејзажи, плаже са црним песком, водени спортови, аква паркови и савршена клима за летњи одмор.</section>
                                 <section class="card-text mb-1"><strong>Цена:</strong>850€</section>
                                 <section class="card-text mb-3"><strong>Просечна оцена:</strong>4.9/5</section>
-                                <a href="moj_nalog.html" class="btn btn-primary">Резервиши</a>
+                                <a href="#" class="btn btn-primary">Резервиши</a>
                             </div>
                         </div>
                     </div>
 
                     <div class="col-md-4 card-item">
                         <div class="card border border-warning rounded-4 shadow-sm h-100 text-center">
-                            <img src="images/majorka.jpg" class="card-img-top" alt="Мајорка" style="height: 250px; width: 100%; object-fit: cover;">
+                            <img src="../images/majorka.jpg" class="card-img-top" alt="Мајорка" style="height: 250px; width: 100%; object-fit: cover;">
                             <div class="card-body d-flex flex-column">
                                 <h5 class="card-title mb-2">Мајорка</h5>
                                 <section>Август 2025</section>
                                 <section class="card-text mb-2">Прекрасне плаже, кристално чисто море, живописна стара градска језгра Палме, планинарске стазе и одлична летња атмосфера.</section>
                                 <section class="card-text mb-1"><strong>Цена:</strong> 870€</section>
                                 <section class="card-text mb-3"><strong>Просечна оцена:</strong> 4.7/5</section>
-                                <a href="moj_nalog.html" class="btn btn-primary">Резервиши</a>
+                                <a href="#" class="btn btn-primary">Резервиши</a>
                             </div>
                         </div>
                     </div>
 
                     <div class="col-md-4 card-item">
                         <div class="card border border-warning rounded-4 shadow-sm h-100 text-center">
-                            <img src="images/sicily.jpg" class="card-img-top" alt="Сицилија" style="height: 250px; width: 100%; object-fit: cover;">
+                            <img src="../images/sicily.jpg" class="card-img-top" alt="Сицилија" style="height: 250px; width: 100%; object-fit: cover;">
                             <div class="card-body d-flex flex-column">
                                 <h5 class="card-title mb-2">Сицилија</h5>
                                 <section>Јун 2025</section>
                                 <section class="card-text mb-2">Прелепо медитеранско острво са плажама, вулканом Етна и историјским градовима. Комбинација културе, природе и мора.</section>
                                 <section class="card-text mb-1"><strong>Цена:</strong> 750€</section>
                                 <section class="card-text mb-3"><strong>Просечна оцена:</strong> 4.8/5</section>
-                                <a href="moj_nalog.html" class="btn btn-primary ">Резервиши</a>
+                                <a href="#" class="btn btn-primary ">Резервиши</a>
                             </div>
                         </div>
                     </div>

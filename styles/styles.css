@@ -17,8 +17,17 @@ nav a:hover {
     background-color: #DD7F50;
 }
 
+.dropdown-menu {
+    min-width: unset;
+    width: auto;
+}
+
 .dropdown-item:hover {
     background-color: #DD7F50;
+}
+
+.fi {
+    border-radius: 20%;
 }
 
 .color1 {
