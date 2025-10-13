@@ -12,3 +12,7 @@ section {
     background-color: #019999 !important;
     border-color: #019999 !important;
 }
+
+tr, th {
+    border: 1px solid black;
+}
