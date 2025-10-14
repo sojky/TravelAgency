@@ -1,4 +1,18 @@
 $(document).ready(function() {
+
+    const reviews = JSON.parse(localStorage.getItem('trips')) || [];
+
+    $('#cards .card').each(function() {
+        const card = $(this);
+        const cardTitle = card.find('.card-title').text().trim();
+
+        const reviewData = reviews.find(r => r.name === cardTitle);
+        if (reviewData && reviewData.review_number > 0) {
+            const average = (reviewData.review_sum / reviewData.review_number).toFixed(1);
+            card.find('.rating').text(`${average} ★`);
+        }
+    });
+
     let $cards = $('#cards .col-12, #cards .col-lg-6, #cards .col-xxl-4');
     let $container = $('#cards');
 
