@@ -46,7 +46,7 @@ $(document).ready(function() {
         {sr: "Букурешт", en: "Bucharest"},
         {sr: "Лапонија", en: "Lapland"}
     ];
-    
+
     function translateToSR(enName) {
         const item = translations.find(t => t.en === enName);
         return item ? item.sr : enName;
@@ -55,21 +55,21 @@ $(document).ready(function() {
     function addBooking(card) {
         let user_json = sessionStorage.getItem("user");
         if (!user_json) {
-            window.location.href = "../sr/prijava.html";
+            window.location.href = "../en/prijavaEN.html";
             return;
         }
         let user = JSON.parse(user_json);
 
         const $card = $(card);
         const imgSrc = $card.find('img').attr('src');
-        const nameSR = $card.find('.card-title').text().trim();
-        const nameEN = translations.find(t => t.sr === nameSR)?.en || nameSR;
+        const nameEN = $card.find('.card-title').text().trim();
+        const nameSR = translateToSR(nameEN);
         const date = $card.find('table tr:nth-child(1) td').text().trim();
         const duration = parseInt($card.find('table tr:nth-child(2) td').text().trim());
 
         const booking = {
             src: imgSrc,
-            name: nameSR,
+            name: nameSR;
             nameEN: nameEN,
             date: date,
             duration: duration,
@@ -89,7 +89,6 @@ $(document).ready(function() {
         }
         localStorage.setItem('users', JSON.stringify(users));
 
-        alert(`Rezervacija za ${nameSR} je uspešno dodata!`);
     }
 
     $('#cards').on('click', '.btn-primary', function(e) {

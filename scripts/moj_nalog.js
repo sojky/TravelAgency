@@ -9,7 +9,7 @@ $(document).ready(function() {
             return;
         }
         let user = JSON.parse(user_json);
-        test(user)
+        //test(user)
         
         $("#hello").text("Поздрав, " + user.username);
 
@@ -190,7 +190,7 @@ $(document).ready(function() {
         $col.append($card);
         return $col;
     }
-
+/*
     function test(user) {
         let array = [
             {
@@ -241,5 +241,5 @@ $(document).ready(function() {
         sessionStorage.setItem('user', JSON.stringify(user));
         localStorage.setItem('users', JSON.stringify(users));
     }
-    
+    */
 });
