@@ -9,7 +9,6 @@ $(document).ready(function() {
             return;
         }
         let user = JSON.parse(user_json);
-        //test(user)
         
         $("#hello").text("Поздрав, " + user.username);
 
@@ -190,56 +189,4 @@ $(document).ready(function() {
         $col.append($card);
         return $col;
     }
-/*
-    function test(user) {
-        let array = [
-            {
-                src: '../images/tenerife.webp',
-                name: 'Тенерифе',
-                nameEN: 'Tenerife',
-                date: '4/11/2025',
-                duration: 7,
-                review: null
-            },
-            {
-                src: '../images/prague.jpg',
-                name: 'Праг',
-                nameEN: 'Prague',
-                date: '4/5/2025',
-                duration: 3,
-                review: null
-            },
-            {
-                src: '../images/paris.webp',
-                name: 'Париз',
-                nameEN: 'Paris',
-                date: '3/9/2024',
-                duration: 6,
-                review: null
-            },
-            {
-                src: '../images/budapest.avif',
-                name: 'Будимпешта',
-                nameEN: 'Budapest',
-                date: '21/5/2023',
-                duration: 2,
-                review: null
-            },
-            {
-                src: '../images/sicily.jpg',
-                name: 'Сицилија',
-                nameEN: 'Sicily',
-                date: '20/3/2023',
-                duration: 3,
-                review: null
-            }
-        ]
-        user.bookings = array
-        const users = JSON.parse(localStorage.getItem('users'));
-        const userIndex = users.findIndex(u => u.username === user.username);
-        users[userIndex] = user;
-        sessionStorage.setItem('user', JSON.stringify(user));
-        localStorage.setItem('users', JSON.stringify(users));
-    }
-    */
 });
